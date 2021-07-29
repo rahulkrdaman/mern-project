@@ -1,0 +1,6 @@
+projectKey=eteam
+serverUrl=http://localhost:9000
+serverVersion=9.0.0.45539
+dashboardUrl=http://localhost:9000/dashboard?id=eteam
+ceTaskId=AXru2iU-JPE_Y3FnpRPq
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXru2iU-JPE_Y3FnpRPq
