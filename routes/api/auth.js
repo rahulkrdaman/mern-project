@@ -29,7 +29,7 @@ router.post(
     check("email", "Please enter valid email").isEmail(),
     check("password", "Password is Required").exists(),
   ],
-  async (req, res) => {
+  async (req, role, res) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -60,6 +60,14 @@ router.post(
         return res
           .status(400)
           .json({ errors: [{ msg: "Inalid Credentials" }] });
+      }
+
+      //check the role
+      if (user.role !== role) {
+        return res.status(403).json({
+          msg: "Please make sure you are logging in from the right portal.",
+          success: false
+        });
       }
 
       const payload = {

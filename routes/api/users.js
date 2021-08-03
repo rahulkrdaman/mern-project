@@ -42,6 +42,7 @@ router.post(
         name,
         email,
         avatar,
+        role,
         password,
       });
 
